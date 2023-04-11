@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p,
+a {
+    font-size: 1.2rem;
+}
+
+.index a {
+    color: red;
+    /* transition: color 500ms ease; */
+}
+
+.index a:hover {
+    color: magenta;
+}
+
+/* Inline and Block level elements demo */
+
+.display p {
+    border: 1px solid red;
+}
+
+.display a {
+    background-color: yellow;
+}
+
+/* Box Model demo */
+
+.box p:first-of-type {
+    background-color: lavender;
+}
+
+.box p:nth-of-type(2) {
+    background-color: yellow;
+}
+
+.box p:last-of-type {
+    background-color: pink;
+}
+
+/* Positioning demo */
+
+.positioning p {
+    width: 1200px;
+    font-size: 1.2rem;
+    border: 1px solid red;
+}
+
+.positioning p:first-of-type {
+    background-color: aqua;
+}
+
+.positioning p:nth-of-type(2) {
+    background-color: pink;
+}
+
+.positioning a {
+    background-color: yellow;
+}
+
+/* Grid demo */
+
+.grids {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+.grid div {
+    background-color: aqua;
+    /* height: 150px;
+    width: 150px; */
+    padding: 30px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pseudo class demo */
+
+.pseudo-class {
+    padding: 10px;
+}
+
+.pseudo-class h2 {
+    margin-top: 30px;
+}
+
+.pseudo-class button,
+.pseudo-class input,
+.pseudo-class label {
+    font-size: 2rem;
+}
+
+.pseudo-class input:focus,
+.pseudo-class input:active {
+    outline: 0;
+}
+
+.pseudo-class .hover:hover,
+.pseudo-class .focus:focus,
+.pseudo-class .active:active {
+    color: red;
+}
+
+.pseudo-class input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.pseudo-class .checkbox:checked {
+    outline: 5px solid red;
+}
+
+.pseudo-class .invalid:invalid {
+    border: 5px solid red;
+}
+
+/* .pseudo-class .required:required {
+    border: 5px solid green;
+} */
+
+.pseudo-class a:link {
+    color: orange;
+}
+
+.pseudo-class a:visited {
+    color: magenta;
+}
+
+.pseudo-class .struct {
+    border: 2px solid blue;
+    margin-bottom: 4px;
+}
+
+/* .pseudo-class .struct:first-of-type {
+    background-color: aqua;
+} */
+
+/* Pseudo elements demo */
+
+.pseudo-elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.pseudo-elem .testimonial p {
+    font-size: 1.75rem;
+}
+
+.pseudo-elem .testimonial {
+    background-color: orange;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    position: relative;
+}
+
+.pseudo-elem .testimonial::before,
+.pseudo-elem .testimonial::after {
+    position: absolute;
+    font-size: 10rem;
+    color: navy;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.pseudo-elem .testimonial::before {
+    content: '“';
+    top: -45px;
+    left: -30px;
+}
+
+.pseudo-elem .testimonial::after {
+    content: '”';
+    bottom: -110px;
+    right: -30px;
+}
