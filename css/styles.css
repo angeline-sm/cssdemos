@@ -10,7 +10,7 @@ a {
 
 .index a {
     color: red;
-    /* transition: color 500ms ease; */
+    transition: color 500ms ease;
 }
 
 .index a:hover {
@@ -134,9 +134,9 @@ a {
     border: 5px solid red;
 }
 
-/* .pseudo-class .required:required {
+.pseudo-class .required:required {
     border: 5px solid green;
-} */
+}
 
 .pseudo-class a:link {
     color: orange;
