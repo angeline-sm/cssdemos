@@ -199,7 +199,7 @@ a {
     border: 5px solid red;
 }
 
-.required:required {
+input:required {
     border: 5px solid var(--lav-dark);
 }
 
