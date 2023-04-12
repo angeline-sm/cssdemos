@@ -200,7 +200,7 @@ a {
 }
 
 input:required {
-    border: 5px solid var(--lav-dark);
+    border: 5px solid #768EFF;
 }
 
 .pseudo-class a:link {
@@ -211,22 +211,22 @@ input:required {
     color: var(--lav-mid);
 }
 
-.pseudo-class .struct {
-    border: 2px solid var(--pink-dark);
+.tree {
+    /* border: 2px solid var(--pink-dark); */
     margin-bottom: 4px;
 }
 
-/* .pseudo-class .struct:first-of-type {
-    background-color: var(--pink-light);
+.tree:first-of-type {
+    background-color: #FFAFDD;
 }
 
-.pseudo-class .struct:nth-of-type(2) {
-    background-color: var(--lav-light);
+.tree:nth-of-type(2) {
+    background-color: #ABBAFD;
 }
 
-.pseudo-class .struct:last-of-type {
-    background-color: var(--teal-light);
-} */
+.tree:last-of-type {
+    background-color: #0CC0DF;
+}
 
 /* Pseudo elements demo */
 
