@@ -1,6 +1,43 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --black: #141414;
+    --grey-dark: #303030;
+    --grey-mid: #545454;
+    --grey-light: #A6A6A6;
+    --teal-dark: #0097B2;
+    --teal-mid: #0CC0DF;
+    --teal-light: #5CE1E6;
+    --lav-dark: #768EFF;
+    --lav-mid: #A197EE;
+    --lav-light: #ABBAFD;
+    --pink-dark: #FF66C4;
+    --pink-light: #FFAFDD;
+}
+
+body {
+    background-color: var(--black);
+    padding: 40px 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--grey-light);
+}
+
+h2 {
+    margin: 20px 0;
 }
 
 p,
@@ -8,37 +45,66 @@ a {
     font-size: 1.2rem;
 }
 
+/* Homepage */
+
+.index ol {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 50px;
+    row-gap: 40px;
+}
+
 .index a {
-    color: red;
-    transition: color 500ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--grey-light);
+    padding: 50px;
+    aspect-ratio: 7/4;
+    text-align: center;
+    border-radius: 50px;
+    background: var(--black);
+    box-shadow:  -10px 10px 20px #0c0c0c,
+    10px -10px 20px #1c1c1c;
+    transition: all 0.3s ease;
 }
 
 .index a:hover {
-    color: magenta;
+    box-shadow:  -12px 12px 24px #0e0e0e,
+    12px -12px 24px #1a1a1a;
+    transform: translateY(-3px);
 }
 
 /* Inline and Block level elements demo */
 
-.display p {
-    border: 1px solid red;
+.display a {
+    color: var(--teal-light);
 }
 
-.display a {
-    background-color: yellow;
+.display p {
+    border: 1px solid var(--lav-light);
+    color: #fff;
 }
 
 /* Box Model demo */
 
 .box p:first-of-type {
-    background-color: lavender;
+    background-color: var(--lav-light);
 }
 
 .box p:nth-of-type(2) {
-    background-color: yellow;
+    background-color: var(--teal-light);
 }
 
 .box p:last-of-type {
-    background-color: pink;
+    background-color: var(--pink-light);
 }
 
 /* Positioning demo */
@@ -46,19 +112,20 @@ a {
 .positioning p {
     width: 1200px;
     font-size: 1.2rem;
-    border: 1px solid red;
+    border: 2px solid var(--grey-light);
+    color: #fff;
 }
 
 .positioning p:first-of-type {
-    background-color: aqua;
+    background-color: var(--teal-dark);
 }
 
 .positioning p:nth-of-type(2) {
-    background-color: pink;
+    background-color: var(--pink-dark);
 }
 
 .positioning a {
-    background-color: yellow;
+    background-color: var(--lav-mid);
 }
 
 /* Grid demo */
@@ -75,7 +142,7 @@ a {
     height: 100%;
     width: 100%;
     padding: 40px;
-    background-color: lightgrey;
+    background-color: var(--lav-light);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -84,11 +151,12 @@ a {
 }
 
 .grid div {
-    background-color: aqua;
+    background-color: var(--lav-dark);
+    color: #fff;
+    font-size: 3rem;
     /* height: 150px;
     width: 150px; */
     padding: 30px;
-    font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,12 +164,9 @@ a {
 
 /* Pseudo class demo */
 
-.pseudo-class {
-    padding: 10px;
-}
-
-.pseudo-class h2 {
-    margin-top: 30px;
+.pseudo-class label,
+.pseudo-class p {
+    color: #fff;
 }
 
 .pseudo-class button,
@@ -118,7 +183,7 @@ a {
 .pseudo-class .hover:hover,
 .pseudo-class .focus:focus,
 .pseudo-class .active:active {
-    color: red;
+    color: var(--pink-dark);
 }
 
 .pseudo-class input[type="checkbox"] {
@@ -127,32 +192,40 @@ a {
 }
 
 .pseudo-class .checkbox:checked {
-    outline: 5px solid red;
+    outline: 3px solid var(--teal-light);
 }
 
 .pseudo-class .invalid:invalid {
     border: 5px solid red;
 }
 
-.pseudo-class .required:required {
-    border: 5px solid green;
+.required:required {
+    border: 5px solid var(--lav-dark);
 }
 
 .pseudo-class a:link {
-    color: orange;
+    color: var(--teal-mid);
 }
 
 .pseudo-class a:visited {
-    color: magenta;
+    color: var(--lav-mid);
 }
 
 .pseudo-class .struct {
-    border: 2px solid blue;
+    border: 2px solid var(--pink-dark);
     margin-bottom: 4px;
 }
 
 /* .pseudo-class .struct:first-of-type {
-    background-color: aqua;
+    background-color: var(--pink-light);
+}
+
+.pseudo-class .struct:nth-of-type(2) {
+    background-color: var(--lav-light);
+}
+
+.pseudo-class .struct:last-of-type {
+    background-color: var(--teal-light);
 } */
 
 /* Pseudo elements demo */
@@ -163,7 +236,6 @@ a {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    font-family: 'Arial', sans-serif;
 }
 
 .pseudo-elem .testimonial p {
@@ -171,7 +243,8 @@ a {
 }
 
 .pseudo-elem .testimonial {
-    background-color: orange;
+    background-color: var(--teal-dark);
+    color: #fff;
     width: 400px;
     height: 400px;
     padding: 30px;
@@ -182,7 +255,7 @@ a {
 .pseudo-elem .testimonial::after {
     position: absolute;
     font-size: 10rem;
-    color: navy;
+    color: var(--teal-light);
     line-height: 1;
     font-weight: bold;
 }
