@@ -110,7 +110,6 @@ a {
 /* Positioning demo */
 
 .positioning p {
-    width: 1200px;
     font-size: 1.2rem;
     border: 2px solid var(--grey-light);
     color: #fff;
